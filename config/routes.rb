@@ -1,7 +1,5 @@
 MusicAnywhere::Application.routes.draw do
-  get "pages/home"
-
-  get "pages/login"
-
-  get "pages/about"
+	match '/login', :to => 'pages#login'
+	match '/about', :to => 'pages#about'
+	root :to => 'pages#home'
 end
